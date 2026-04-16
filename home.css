@@ -275,9 +275,7 @@ footer {
 .styled-table tbody tr:last-of-type {
     border-bottom: 2px solid #28a745;
 }
-/* كود التجاوب مع الموبايل */
 @media screen and (max-width: 768px) {
-    /* 1. تظبيط الهيدر واللينكات */
     .homenav {
         height: auto;
         flex-direction: column;
@@ -293,10 +291,9 @@ footer {
     }
 
     .design, .design:hover {
-        width: 80%; /* الزراير تاخد عرض الشاشة */
+        width: 80%; 
     }
 
-    /* 2. تظبيط الصور في الصفحة الرئيسية */
     .homeimg {
         flex-direction: column;
         align-items: center;
@@ -307,23 +304,68 @@ footer {
         max-width: 90%;
     }
 
-    /* 3. تظبيط الجداول عشان متخرجش برا الشاشة */
     .coursestable table, .styled-table {
         width: 95%;
         display: block;
-        overflow-x: auto; /* يعمل سكرول لو الجدول عريض */
+        overflow-x: auto; 
         white-space: nowrap;
     }
 
-    /* 4. تظبيط الفورم */
     form {
-        width: 90%; /* تصغر مع الموبايل */
+        width: 90%; 
         padding: 20px;
     }
 
-    /* 5. الفوتر */
     .footerlinks {
         flex-direction: column;
         gap: 10px;
     }
+}
+/* تظبيط رسالة الترحيب */
+.welcmessage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #17812f;
+    min-height: 200px; /* طول مناسب عشان متبقاش واخدة نص الصفحة */
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.welcmessage h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* تظبيط قسم الصور */
+.homeimg {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 20px;
+    flex-wrap: wrap; /* عشان لو الصور كبيرة تنزل تحت بعض في الموبايل */
+}
+
+.imgs {
+    flex: 1;
+    max-width: 400px; /* عشان الصورة متفرشش أوي */
+    text-align: center;
+}
+
+.imgs img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* حركة إضافية: لو عندك نص تحت الصور */
+.imgs p {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #333;
+    font-family: Arial, sans-serif;
 }
