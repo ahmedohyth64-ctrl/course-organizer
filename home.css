@@ -275,32 +275,55 @@ footer {
 .styled-table tbody tr:last-of-type {
     border-bottom: 2px solid #28a745;
 }
-/* لما الصفحة تتفتح من موبايل */
+/* كود التجاوب مع الموبايل */
 @media screen and (max-width: 768px) {
-    
-    /* 1. الجدول: خليه ياخد عرض الشاشة كلها ويظهر فيه سكرول لو كبير */
-    .coursestable table, .styled-table {
-        width: 100%;
-        display: block;
-        overflow-x: auto; /* بيعمل سكرول يمين وشمال لو الجدول عريض */
-    }
-
-    /* 2. الـ Navbar: خليهم ينزلوا تحت بعض بدل ما هما جمب بعض ومزنوقين */
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-
-    /* 3. الصور: خليها تصغر وتكبر مع الشاشة */
-    img {
-        max-width: 100%;
+    /* 1. تظبيط الهيدر واللينكات */
+    .homenav {
         height: auto;
+        flex-direction: column;
+        padding: 10px 0;
     }
 
-    /* 4. الفورم: خلي عرضها 90% بدل ما هي رقم ثابت */
+    .pagelinks {
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .design, .design:hover {
+        width: 80%; /* الزراير تاخد عرض الشاشة */
+    }
+
+    /* 2. تظبيط الصور في الصفحة الرئيسية */
+    .homeimg {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .imgs {
+        max-width: 90%;
+    }
+
+    /* 3. تظبيط الجداول عشان متخرجش برا الشاشة */
+    .coursestable table, .styled-table {
+        width: 95%;
+        display: block;
+        overflow-x: auto; /* يعمل سكرول لو الجدول عريض */
+        white-space: nowrap;
+    }
+
+    /* 4. تظبيط الفورم */
     form {
-        width: 90% !important;
-        margin: 10px auto;
+        width: 90%; /* تصغر مع الموبايل */
+        padding: 20px;
+    }
+
+    /* 5. الفوتر */
+    .footerlinks {
+        flex-direction: column;
+        gap: 10px;
     }
 }
