@@ -97,6 +97,13 @@
     border-radius: 10px;      
     box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
 }
+.courses-section h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #17812f;
+    margin-top: 20px;
+}
 .coursestable table {
     width: 80%; 
     margin: 20px auto;
@@ -237,7 +244,7 @@ footer {
 .social-card i {
     font-size: 24px;
 }
-/* تظبيط الجدول */
+
 .styled-table {
     width: 90%;
     margin: 30px auto;
@@ -247,7 +254,7 @@ footer {
 }
 
 .styled-table thead tr {
-    background-color: #28a745; /* اللون الموحد بتاعك [cite: 13] */
+    background-color: #28a745; 
     color: #ffffff;
     text-align: left;
 }
@@ -260,7 +267,6 @@ footer {
     border-bottom: 1px solid #dddddd;
 }
 
-/* حركة الـ Hover المطلوبة [cite: 17] */
 .styled-table tbody tr:hover {
     background-color: #f3f3f3;
     transition: 0.3s;
@@ -268,4 +274,33 @@ footer {
 
 .styled-table tbody tr:last-of-type {
     border-bottom: 2px solid #28a745;
+}
+/* لما الصفحة تتفتح من موبايل */
+@media screen and (max-width: 768px) {
+    
+    /* 1. الجدول: خليه ياخد عرض الشاشة كلها ويظهر فيه سكرول لو كبير */
+    .coursestable table, .styled-table {
+        width: 100%;
+        display: block;
+        overflow-x: auto; /* بيعمل سكرول يمين وشمال لو الجدول عريض */
+    }
+
+    /* 2. الـ Navbar: خليهم ينزلوا تحت بعض بدل ما هما جمب بعض ومزنوقين */
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    /* 3. الصور: خليها تصغر وتكبر مع الشاشة */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* 4. الفورم: خلي عرضها 90% بدل ما هي رقم ثابت */
+    form {
+        width: 90% !important;
+        margin: 10px auto;
+    }
 }
