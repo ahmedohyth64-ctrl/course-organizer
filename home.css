@@ -23,16 +23,16 @@
     width: 200px;
     background: rgba(0, 0, 255, 0);
     display: flex;
-    justify-content: center;/*3shan akhaly el logo felnos*/
-    align-items: center;/*nafs elkalam*/
+    justify-content: center;
+    align-items: center;
 }
 .pagelinks{
     height: 100px;
     width: 45%;
     background: rgba(255, 0, 0, 0);
     display: flex;
-    justify-content: space-around;/*3shan yb2a feh space benhom mazbouta m3 hdoud el page*/
-    align-items: center;/*3shan yb2o mazbouten mn fou2 w mn taht*/
+    justify-content: space-around;
+    align-items: center;
     
 }
 .pagelinks a {
@@ -321,7 +321,6 @@ footer {
         gap: 10px;
     }
 }
-/* تظبيط رسالة الترحيب */
 .welcmessage {
     display: flex;
     flex-direction: column;
@@ -329,7 +328,7 @@ footer {
     align-items: center;
     text-align: center;
     color: #17812f;
-    min-height: 200px; /* طول مناسب عشان متبقاش واخدة نص الصفحة */
+    min-height: 200px; 
     padding: 20px;
     margin-top: 20px;
 }
@@ -338,20 +337,18 @@ footer {
     font-size: 40px;
     margin-bottom: 10px;
 }
-
-/* تظبيط قسم الصور */
 .homeimg {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     gap: 30px;
     padding: 20px;
-    flex-wrap: wrap; /* عشان لو الصور كبيرة تنزل تحت بعض في الموبايل */
+    flex-wrap: wrap; 
 }
 
 .imgs {
     flex: 1;
-    max-width: 400px; /* عشان الصورة متفرشش أوي */
+    max-width: 400px; 
     text-align: center;
 }
 
@@ -362,7 +359,6 @@ footer {
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-/* حركة إضافية: لو عندك نص تحت الصور */
 .imgs p {
     margin-top: 15px;
     font-size: 18px;
